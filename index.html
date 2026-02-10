@@ -351,19 +351,7 @@
             transform: rotate(0deg);
             transition: transform 0.3s ease;
         }
-        
-        .photo-frame:hover {
-            transform: scale(1.05) translateY(-5px) !important;
-            z-index: 10 !important;
-        }
-        
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-        
+                
         /* Mobile - KEEP 2-3-2 pattern, just smaller */
         @media (max-width: 600px) {
             .photo-collage {
@@ -796,25 +784,6 @@
             }
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .photo-collage {
-                height: 450px;
-            }
-
-            .photo-frame {
-                width: clamp(130px, 38vw, 180px) !important;
-                height: clamp(160px, 48vw, 220px) !important;
-            }
-
-            .photo-frame:nth-child(1) { top: 20px; left: 5%; transform: rotate(-5deg); }
-            .photo-frame:nth-child(2) { top: 30px; right: 15%; transform: rotate(8deg); }
-            .photo-frame:nth-child(3) { top: 180px; left: 8%; transform: rotate(3deg); }
-            .photo-frame:nth-child(4) { top: 160px; right: 8%; transform: rotate(-7deg); }
-            .photo-frame:nth-child(5) { top: 320px; left: 10%; transform: rotate(6deg); }
-            .photo-frame:nth-child(6) { top: 310px; right: 10%; transform: rotate(-4deg); }
-            .photo-frame:nth-child(7) { top: 100px; left: 35%; transform: rotate(2deg); }
-
             .video-wrapper {
                 padding-bottom: 177.78%; /* 16:9 for tablets */
             }
@@ -902,43 +871,39 @@
 
         <!-- Collage Photo Gallery -->
         <div class="photo-collage">
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                     <img src="https://i.ibb.co/gF3ggwqm/Whats-App-Image-2026-02-07-at-1-05-59-PM.jpg" alt="Beautiful moments">
+            <!-- Row 1: 2 photos -->
+            <div class="photo-row">
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 1">
+                </div>
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 2">
                 </div>
             </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                     <img src="https://i.ibb.co/fYj3pP5r/Whats-App-Image-2026-01-17-at-4-26-02-PM.jpg" alt="Beautiful moments">
+        
+            <!-- Row 2: 3 photos -->
+            <div class="photo-row">
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 3">
+                </div>
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 4">
+                </div>
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 5">
                 </div>
             </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="https://i.ibb.co/pjyspJMW/Whats-App-Image-2026-01-07-at-5-58-31-PM.jpg" alt="Beautiful moments">
+        
+            <!-- Row 3: 2 photos -->
+            <div class="photo-row">
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 6">
                 </div>
-            </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="https://i.ibb.co/nMBXLn6J/Whats-App-Image-2026-01-07-at-5-58-32-PM-1.jpg" alt="Beautiful moments">
-                </div>
-            </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="https://i.ibb.co/s9qjX3vH/Whats-App-Image-2026-02-07-at-1-45-34-PM.jpg" alt="Beautiful moments">
-                </div>
-            </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="https://i.ibb.co/vCWMLKMn/Whats-App-Image-2026-02-07-at-1-06-02-PM-1.jpg" alt="Beautiful moments">
-                </div>
-            </div>
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="https://i.ibb.co/G3WWXbNy/Whats-App-Image-2026-01-07-at-6-15-48-PM.jpg" alt="Beautiful moments">
+                <div class="photo-frame">
+                    <img src="..." alt="Photo 7">
                 </div>
             </div>
         </div>
-
         <!-- Nicknames Section -->
         <div class="nicknames-section">
             <h2>All The Ways I Call You Mine</h2>
