@@ -324,120 +324,62 @@
         }
 
         /* Collage Photo Gallery */
+   /* Photo Gallery - 2-3-2 Grid Pattern */
         .photo-collage {
-            position: relative;
-            width: 100%;
-            max-width: 1200px;
-            height: 800px;
-            margin: 0 auto 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
         }
-
+        
+        .photo-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
         .photo-frame {
-            position: absolute;
             background: white;
-            padding: 5px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
-            cursor: pointer;
+            padding: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            width: clamp(120px, 28vw, 250px);
+            height: clamp(150px, 35vw, 300px);
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
         }
-
+        
         .photo-frame:hover {
-            transform: scale(1.05) translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            transform: scale(1.05) translateY(-5px) !important;
             z-index: 10 !important;
         }
-
+        
         .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
+            border-radius: 6px;
         }
-
-        .photo-placeholder {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #e8d5d5 0%, #d4a5a5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.1em;
-            text-align: center;
-            padding: 2px;
-        }
-
-        /* Frame positioning - Instagram style collage */
-        .photo-frame:nth-child(1) {
-            width: 280px;
-            height: 350px;
-            top: 50px;
-            left: 10%;
-            transform: rotate(-3deg);
-            z-index: 5;
-        }
-
-        .photo-frame:nth-child(2) {
-            width: 320px;
-            height: 400px;
-            top: 120px;
-            left: 25%;
-            transform: rotate(2deg);
-            z-index: 6;
-        }
-
-        .photo-frame:nth-child(3) {
-            width: 300px;
-            height: 380px;
-            top: 80px;
-            right: 20%;
-            transform: rotate(-2deg);
-            z-index: 4;
-        }
-
-        .photo-frame:nth-child(4) {
-            width: 260px;
-            height: 320px;
-            top: 420px;
-            left: 15%;
-            transform: rotate(4deg);
-            z-index: 7;
-        }
-
-        .photo-frame:nth-child(5) {
-            width: 290px;
-            height: 360px;
-            top: 380px;
-            right: 20%;
-            transform: rotate(-4deg);
-            z-index: 3;
-        }
-
-        .photo-frame:nth-child(6) {
-            width: 290px;
-            height: 360px;
-            bottom: 50px;
-            left: 40%;
-            transform: rotate(3deg);
-            z-index: 5;
-        }
-
-        .photo-frame:nth-child(7) {
-            width: 270px;
-            height: 340px;
-            top: 20px;
-            right: 5%;
-            transform: rotate(2deg);
-            z-index: 2;
-        }
-
-        .photo-frame:nth-child(8) {
-            width: 270px;
-            height: 340px;
-            bottom: 20px;
-            right: 5%;
-            transform: rotate(3deg);
-            z-index: 2;
+        
+        /* Mobile - KEEP 2-3-2 pattern, just smaller */
+        @media (max-width: 600px) {
+            .photo-collage {
+                gap: 12px;
+                padding: 0 10px;
+            }
+            
+            .photo-row {
+                gap: 12px;
+            }
+            
+            .photo-frame {
+                width: clamp(100px, 25vw, 140px);
+                height: clamp(130px, 32vw, 180px);
+                padding: 5px;
+            }
         }
 
          /* Nicknames Section */
